@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+html {
+  box-sizing: border-boxl;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*========== The principal code =============*/
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: "Lexend Deca";
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 55rem;
+  height: 28rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: lightseagreen;
+}
+
+img {
+  height: 2.5em;
+}
+
+.sr-only {
+  clip: rect(1px 1px 1px 1px);
+  position: absolute;
+}
+
+footer {
+  margin: 3rem 0 0 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a:hover {
+  color: aqua;
+  text-decoration: aqua underline;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display";
+  font-size: 38px;
+}
+
+p {
+  font-size: 0.9em;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 25px;
+  margin: 0 0 3.5em 0;
+}
+
+.button {
+  background-color: hsl(0, 0%, 95%);
+  padding: 0.7em 1em;
+  border-radius: 35px;
+  text-decoration: none;
+  display: inline-block;
+  border: hsl(0, 0%, 95%) solid 2px;
+  transition: ease-in-out 0.3s;
+}
+
+.column {
+  padding: 40px;
+}
+
+/*=========== sedans ============*/
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 0 0 10px;
+}
+
+.sedans .button {
+  color: hsl(31, 77%, 52%);
+}
+
+.sedans .button:hover {
+  background-color: hsl(31, 77%, 52%);
+  color: hsl(0, 0%, 95%);
+}
+
+/*=========== suvs ==========*/
+
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.suvs .button {
+  color: hsl(184, 100%, 22%);
+}
+
+.suvs .button:hover {
+  background-color: hsl(184, 100%, 22%);
+  color: hsl(0, 0%, 95%);
+}
+
+/*============ luxury ===========*/
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 10px 10px 0;
+}
+
+.luxury .button {
+  color: hsl(179, 100%, 13%);
+}
+
+.luxury .button:hover {
+  background-color: hsl(179, 100%, 13%);
+  color: hsl(0, 0%, 95%);
+}
+
+/*========= Media Queries ==========*/
+
+@media all and (max-width: 890px) {
+  * {
+    z-index: 2;
+  }
+  section {
+    flex-direction: column;
+    width: 21rem;
+  }
+
+  .sedans {
+    border-radius: 10px 10px 0 0;
+  }
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+  footer {
+    position: fixed;
+    top: 15px;
+    background: rgba(255, 255, 255, 0.452);
+    width: 250px;
+    height: 100px;
+    word-wrap: break-word;
+    z-index: 1;
+  }
+}
